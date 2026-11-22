@@ -1,0 +1,23 @@
+[package]
+name = "norn"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Norn: quick yes/no, choice and score decisions about a text, with probabilities (jevos, on the CPU)"
+
+[dependencies]
+# the model (jevos, a llama GGUF) run on the CPU
+candle-core = "=0.11.1"
+candle-transformers = "=0.11.1"
+candle-nn = "=0.11.1"
+# candle's llama module's spans (already in the tree)
+tracing = "=0.1.44"
+# its tokenizer (tokenizer.json); the regex engine in Rust, nothing in C
+tokenizers = { version = "=0.23.2", default-features = false, features = ["fancy-regex"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 1

@@ -1,0 +1,8 @@
+Norn ports parts of jev (https://github.com/feder-cr/jev): the prompt layout, the answer tokens, and how yes/no
+answers become a choice or a score (src/lib.rs). MIT License, Copyright (c) Federico Elia and Loris Salsi.
+
+The model Norn runs, jevos (https://huggingface.co/feder-cr/jev), is MIT; it is made from MiniCPM5-1B (openbmb),
+Apache License 2.0. The model is downloaded, not part of this repository.
+
+src/llama.rs is Candle's quantized llama (https://github.com/huggingface/candle, candle-transformers 0.11.1), MIT OR
+Apache-2.0, the Candle authors, with two changes marked at its top.
