@@ -611,7 +611,7 @@ impl ModelWeights {
 #[cfg(test)]
 mod tests {
     use candle_transformers::utils::build_causal_mask;
-    use candle::{Device, Result};
+    use candle_core::{Device, Result};
 
     // ── Mask shape tests ──────────────────────────────────────────────────────
 
