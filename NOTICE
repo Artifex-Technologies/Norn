@@ -1,3 +1,5 @@
+Norn is Mozilla Public License 2.0 (LICENSE). These parts keep their own licences:
+
 Norn ports parts of jev (https://github.com/feder-cr/jev): the prompt layout, the answer tokens, and how yes/no
 answers become a choice or a score (src/lib.rs). MIT License, Copyright (c) Federico Elia and Loris Salsi.
 
